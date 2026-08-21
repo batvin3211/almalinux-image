@@ -12,8 +12,6 @@ dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free
 dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
 dnf install -y btop distrobox tailscale
 
-systemctl enable --now tailscaled
-
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install com.brave.Browser \
          dev.deedles.Trayscale \
