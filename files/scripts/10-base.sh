@@ -30,9 +30,5 @@ flatpak install com.brave.Browser \
          com.usebottles.bottles -y
 		 curl -fsSL https://install.determinate.systems/nix | sh -s -- install --no-confirm" >> /etc/profile
 
-mkdir -p /nix && \
-	curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix -o /nix/determinate-nix-installer.sh && \
-	chmod a+rx /nix/determinate-nix-installer.sh
-
 
 echo "Hello, Atomic AlmaLinux respin world!."
