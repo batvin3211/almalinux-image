@@ -30,6 +30,6 @@ flatpak install com.brave.Browser \
          com.orcaslicer.OrcaSlicer \
          com.usebottles.bottles -y
 		 curl -fsSL https://install.determinate.systems/nix | sh -s -- install --no-confirm" >> /etc/profile
-
+mkdir -p /nix
 
 echo "Hello, Atomic AlmaLinux respin world!."
