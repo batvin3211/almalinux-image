@@ -11,7 +11,7 @@ dnf install -y --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-l
 dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
 dnf install -y btop distrobox tailscale gnome-tweaks
-dnf remove -y firefox
+dnf remove -y firefox cockpit
 
 echo "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install com.brave.Browser \
