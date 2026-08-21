@@ -12,21 +12,6 @@ dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free
 dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
 dnf install -y btop distrobox tailscale
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install com.brave.Browser \
-         dev.deedles.Trayscale \
-         com.github.tchx84.Flatseal \
-         com.mattjakeman.ExtensionManager \
-         io.github.celluloid_player.Celluloid \
-         org.gpodder.gpodder \
-         org.freac.freac \
-         com.obsproject.Studio \
-         fr.handbrake.ghb \
-         com.makemkv.MakeMKV \
-         org.ferdium.Ferdium \
-         org.freecad.FreeCAD \
-         com.orcaslicer.OrcaSlicer \
-         com.usebottles.bottles -y
 mkdir -p /nix && \
 	curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix -o /nix/determinate-nix-installer.sh && \
 	chmod a+rx /nix/determinate-nix-installer.sh
