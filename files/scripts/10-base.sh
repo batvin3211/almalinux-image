@@ -10,7 +10,7 @@ set -xeuo pipefail
 dnf install -y --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
 dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 
-dnf install -y btop distrobox epel-release
+dnf install -y btop distrobox epel-release tailscale
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install com.brave.Browser \
@@ -27,7 +27,6 @@ flatpak install com.brave.Browser \
          org.freecad.FreeCAD \
          com.orcaslicer.OrcaSlicer \
          com.usebottles.bottles -y
-curl -fsSL https://tailscale.com/install.sh | sh
 mkdir -p /nix && \
 	curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix -o /nix/determinate-nix-installer.sh && \
 	chmod a+rx /nix/determinate-nix-installer.sh
