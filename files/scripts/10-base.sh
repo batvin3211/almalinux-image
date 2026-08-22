@@ -9,7 +9,9 @@ set -xeuo pipefail
 # dnf config-manager --set-enabled crb
 dnf install -y --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
 dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
-dnf install -y btop distrobox gnome-tweaks
+dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
+dnf install -y btop distrobox tailscale gnome-tweaks
+systemctl enable tailscaled
 dnf remove -y firefox cockpit
 
 mkdir -p /nix
