@@ -124,6 +124,14 @@ managing and updating container-based operating system images. Here are some bas
 
 Build or download the ISO for your image, boot into it and follow the installation procedure.
 
+highjack a existing system with podman
+```
+podman run --rm --privileged -v /dev:/dev -v /var/lib/containers:/var/lib/containers -v /:/target \
+             --pid=host --security-opt label=type:unconfined_t \
+             ghcr.io/batvin3211/almalinux-image:latest \
+             bootc install to-existing-root
+```
+
 ### Switching from another image
 
 > [!CAUTION]
