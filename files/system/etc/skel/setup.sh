@@ -14,4 +14,3 @@ flatpak install com.brave.Browser \
          com.orcaslicer.OrcaSlicer \
          com.usebottles.bottles -y
 curl -fsSL https://install.determinate.systems/nix | sh -s -- install --no-confirm
-curl -fsSL https://tailscale.com/install.sh | sh
