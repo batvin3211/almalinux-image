@@ -126,7 +126,7 @@ Build or download the ISO for your image, boot into it and follow the installati
 
 highjack a existing system with podman
 ```
-podman run --rm --privileged -v /dev:/dev -v /var/lib/containers:/var/lib/containers -v /:/target \
+sudo podman run --rm --privileged -v /dev:/dev -v /var/lib/containers:/var/lib/containers -v /:/target \
              --pid=host --security-opt label=type:unconfined_t \
              ghcr.io/batvin3211/almalinux-image:latest \
              bootc install to-existing-root
