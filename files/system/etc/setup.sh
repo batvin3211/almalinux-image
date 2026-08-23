@@ -1,8 +1,9 @@
 flatpak install com.brave.Browser \
          dev.deedles.Trayscale \
          com.github.tchx84.Flatseal \
-		     it.mijorus.gearlever \
+	     it.mijorus.gearlever \
          com.mattjakeman.ExtensionManager \
+		 org.gnome.Boxes \
          io.github.celluloid_player.Celluloid \
          org.gpodder.gpodder \
          org.freac.freac \
