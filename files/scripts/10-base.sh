@@ -15,5 +15,6 @@ systemctl enable tailscaled
 dnf remove -y firefox cockpit
 
 mkdir -p /nix
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install --no-confirm
 
 echo "Hello, Atomic AlmaLinux respin world!."
